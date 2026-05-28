@@ -124,3 +124,12 @@ app.post("/chat", async (req, res) => {
 app.listen(8000, () => {
   console.log("Server running on port 8000");
 });
+
+const https = require("https");
+setInterval(() => {
+  https.get("https://resume-analyzer-backend-1n2h.onrender.com", (res) => {
+    console.log("Keep alive ping:", res.statusCode);
+  }).on("error", (e) => {
+    console.log("Ping error:", e.message);
+  });
+}, 14 * 60 * 1000);
