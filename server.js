@@ -10,7 +10,8 @@ const app = express();
 app.use(cors({ 
   origin: [
     "http://localhost:5173",
-    "https://resume-analyzer-frontend-g0be7brsy-rahul-kumar-s-projects3.vercel.app"
+    "https://resume-analyzer-frontend-g0be7brsy-rahul-kumar-s-projects3.vercel.app",
+    "https://resume-analyzer-frontend-azure.vercel.app"
   ]
 }));
 app.use(express.json());
