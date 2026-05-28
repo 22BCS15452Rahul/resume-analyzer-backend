@@ -7,7 +7,12 @@ const pdfParse = require("pdf-parse/lib/pdf-parse.js");
 const Groq = require("groq-sdk");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ 
+  origin: [
+    "http://localhost:5173",
+    "https://resume-analyzer-frontend-g0be7brsy-rahul-kumar-s-projects3.vercel.app"
+  ]
+}));
 app.use(express.json());
 
 const upload = multer({ dest: "uploads/" });
